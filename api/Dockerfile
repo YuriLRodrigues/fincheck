@@ -11,7 +11,7 @@ COPY . .
 RUN apk add --no-cache openssl3 
 
 ARG VERSION="docker-nidoran"
-RUN yarn build
+RUN yarn prisma generate && yarn build
 
 FROM node:21-alpine AS deploy
 WORKDIR /app
@@ -23,6 +23,6 @@ COPY --from=build /app/package.json ./
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 
-EXPOSE 3344
+EXPOSE 3333
 
 CMD ["yarn", "start:prod"]
