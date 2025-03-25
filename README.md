@@ -39,6 +39,8 @@
 
 <img src="./assets/Home2.png" alt="preview" width="400px">
 
-## 📝 Licença
+## Deploy
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+### Dados de acesso para teste
+* Email: usertest@gmail.com
+* Senha: Test123#
