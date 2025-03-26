@@ -5,8 +5,6 @@
 
 > O FINCHECK é uma aplicação para gerenciamento de Finanças pessoais. Monitore seus gastos de forma simples, podendo filtrar por conta, categoria e data.
 
- => O Projeto está em desenvolvimento
-
 ## 👩‍💻 Tecnologias usadas
   
   ### Back-end
