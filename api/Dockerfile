@@ -23,6 +23,6 @@ COPY --from=build /app/package.json ./
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 
-EXPOSE 3333
+EXPOSE 3344
 
 CMD ["yarn", "start:prod"]

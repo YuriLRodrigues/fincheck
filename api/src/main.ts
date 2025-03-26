@@ -3,8 +3,6 @@ import 'dotenv/config';
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import * as morgan from 'morgan';
-import { Request } from 'express';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -13,13 +11,9 @@ async function bootstrap() {
 
   app.enableCors({
     origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS',
+    allowedHeaders: 'Content-Type, Authorization',
   });
-  morgan.token(
-    'remote-addr',
-    (req: Request) =>
-      req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-  );
-  app.use(morgan('combined'));
 
   await app.listen(3344);
 }
