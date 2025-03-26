@@ -4,7 +4,11 @@ import { IsNotEmpty, IsString, NotEquals, validateSync } from 'class-validator';
 class Env {
   @IsString()
   @IsNotEmpty()
-  dbURL: string;
+  FRONTEND_URL: string;
+
+  @IsString()
+  @IsNotEmpty()
+  DATABASE_URL: string;
 
   @IsString()
   @IsNotEmpty()
